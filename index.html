@@ -1,88 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accesos de Seguridad</title>
+
+<title>Control de Cumplimiento</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{
+
+*{
     margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f4f6f8;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#566676;
     min-height:100vh;
 }
 
-.contenedor{
-    width:90%;
-    max-width:420px;
+.header{
+    height:230px;
+    background:#566676;
+}
+
+.card{
     background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
-    text-align:center;
+    margin-top:-70px;
+    border-radius:30px 30px 0 0;
+    min-height:calc(100vh - 160px);
+    padding:90px 25px 40px;
+    position:relative;
+}
+
+.avatar{
+    width:170px;
+    height:170px;
+    object-fit:contain;
+    background:white;
+    border-radius:50%;
+    padding:10px;
+    position:absolute;
+    left:50%;
+    top:-85px;
+    transform:translateX(-50%);
 }
 
 h1{
-    color:#0a5ca8;
-    margin-bottom:10px;
+    text-align:center;
+    font-size:42px;
+    font-weight:700;
+    color:#223;
+    margin-bottom:45px;
 }
 
-p{
-    color:#666;
-    margin-bottom:25px;
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
 }
 
-.boton{
-    display:block;
+.item{
+    display:flex;
+    align-items:center;
     text-decoration:none;
-    color:white;
-    background:#0a5ca8;
-    padding:16px;
-    margin:15px 0;
-    border-radius:10px;
-    font-size:18px;
-    font-weight:bold;
-    transition:.3s;
+    background:#f7f7f7;
+    border-radius:18px;
+    padding:18px;
+    transition:.25s;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
 }
 
-.boton:hover{
-    background:#084a86;
+.item:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
 }
 
-.antito{background:#0066cc;}
-.actsafe{background:#1e8e3e;}
-.atento{background:#f57c00;}
+.logo{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.nombre{
+    flex:1;
+    margin-left:20px;
+    color:#111;
+    font-size:24px;
+    font-weight:500;
+}
+
+.flecha{
+    font-size:40px;
+    color:#222;
+}
+
+@media(max-width:600px){
+
+.header{
+    height:180px;
+}
+
+.card{
+    margin-top:-55px;
+    padding:80px 18px 25px;
+}
+
+.avatar{
+    width:140px;
+    height:140px;
+    top:-70px;
+}
+
+h1{
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+.logo{
+    width:50px;
+    height:50px;
+}
+
+.nombre{
+    font-size:20px;
+}
+
+.flecha{
+    font-size:30px;
+}
+
+}
+
 </style>
 
 </head>
+
 <body>
 
-<div class="contenedor">
+<div class="header"></div>
 
-<h1>Accesos</h1>
+<div class="card">
 
-<p>Seleccione la aplicación que desea abrir.</p>
+<img src="images/trabajador.png" class="avatar">
 
-<a class="boton antito"
+<h1>Control de<br>Cumplimiento</h1>
+
+<div class="menu">
+
+<a class="item"
 href="https://antito.asip.antamina.com/new?medium=qr">
-Antito
+
+<img src="images/antamina.png" class="logo">
+
+<div class="nombre">
+Antito Digital
+</div>
+
+<div class="flecha">
+→
+</div>
+
 </a>
 
-<a class="boton actsafe"
+<a class="item"
 href="https://qr2.mobi/27k6b">
+
+<img src="images/actsafe.png" class="logo">
+
+<div class="nombre">
 ActSafe
+</div>
+
+<div class="flecha">
+→
+</div>
+
 </a>
 
-<a class="boton atento"
+<a class="item"
 href="https://www.atento24.com/">
+
+<img src="images/atento24.png" class="logo">
+
+<div class="nombre">
 Atento24
+</div>
+
+<div class="flecha">
+→
+</div>
+
 </a>
 
 </div>
 
+</div>
+
 </body>
+
 </html>
